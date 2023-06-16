@@ -1,0 +1,12 @@
+apiVersion: devops.my.domain/v1
+kind: DemoMicroService
+metadata:
+  labels:
+    app.kubernetes.io/name: demomicroservice
+    app.kubernetes.io/instance: demomicroservice-sample
+    app.kubernetes.io/part-of: example
+    app.kuberentes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: example
+  name: demomicroservice-sample
+spec:
+  # TODO(user): Add fields here

@@ -1,0 +1,27 @@
+# permissions for end users to view demomicroservices.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: demomicroservice-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: example
+    app.kubernetes.io/part-of: example
+    app.kubernetes.io/managed-by: kustomize
+  name: demomicroservice-viewer-role
+rules:
+- apiGroups:
+  - devops.my.domain
+  resources:
+  - demomicroservices
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - devops.my.domain
+  resources:
+  - demomicroservices/status
+  verbs:
+  - get

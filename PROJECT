@@ -1,0 +1,16 @@
+domain: my.domain
+layout:
+- go.kubebuilder.io/v3
+projectName: example
+repo: my.domain/example
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: my.domain
+  group: devops
+  kind: DemoMicroService
+  path: my.domain/example/api/v1
+  version: v1
+version: "3"
