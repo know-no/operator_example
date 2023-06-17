@@ -12,6 +12,8 @@ spec:
     kind: DemoMicroService
     listKind: DemoMicroServiceList
     plural: demomicroservices
+    shortNames:
+    - dms
     singular: demomicroservice
   scope: Namespaced
   versions:
@@ -35,9 +37,9 @@ spec:
           spec:
             description: DemoMicroServiceSpec defines the desired state of DemoMicroService
             properties:
-              foo:
+              image:
                 description: Foo is an example field of DemoMicroService. Edit demomicroservice_types.go
-                  to remove/update
+                  to remove/update Image is the image of container
                 type: string
             type: object
           status:

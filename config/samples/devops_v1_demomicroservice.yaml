@@ -10,3 +10,4 @@ metadata:
   name: demomicroservice-sample
 spec:
   # TODO(user): Add fields here
+  image: stefanprodan/podinfo:0.0.1

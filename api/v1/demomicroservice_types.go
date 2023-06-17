@@ -28,8 +28,9 @@ type DemoMicroServiceSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 
-	// Foo is an example field of DemoMicroService. Edit demomicroservice_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	//Foo is an example field of DemoMicroService. Edit demomicroservice_types.go to remove/update
+	//Image is the image of container
+	Image string `json:"image,omitempty"`
 }
 
 // DemoMicroServiceStatus defines the observed state of DemoMicroService
@@ -39,6 +40,7 @@ type DemoMicroServiceStatus struct {
 }
 
 //+kubebuilder:object:root=true
+//+kubebuilder:resource:shortName=dms
 //+kubebuilder:subresource:status
 
 // DemoMicroService is the Schema for the demomicroservices API
